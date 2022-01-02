@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+	box-sizing: border-box;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: hsl(273, 75%, 66%);
+}
+
+main{
+	background-color: #fff;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	border-radius: 24px;
+	-webkit-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.75);
+}
+
+.faq{
+	padding: 72px 96px;
+	color: hsl(238, 29%, 16%);
+}
+
+.faq-block{
+	width: 438px;
+	border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.faq-block.active .question{
+	font-weight: 700;
+}
+
+.faq-block.active img{
+	transform: rotate(180deg);
+}
+
+.faq-block.active .answer{
+	max-height: 200px;
+	opacity: 1;
+}
+
+.question{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: hsl(237, 12%, 33%);
+	cursor: pointer;
+}
+
+.question:hover{
+	color: hsl(14, 88%, 65%);
+}
+
+.answer{
+	font-size: 15px;
+	color: hsl(240, 6%, 50%);
+	max-height: 0;
+	opacity: 0;
+	transition: .5s;
+}
+
+.answer p{
+	margin-top: 0;
+}
+
+.dekstop{
+	position: relative;
+	margin-left: -90px;
+}
+
+.woman-dekstop{
+	position: relative;
+	z-index: 999;
+}
+
+.dekstop-pattern{
+	position: absolute;
+	top: -360px;
+	left: -490px;
+	z-index: 1;
+}
+
+.mobile{
+	display: none;
+}
+
+@media only screen and (max-width: 1040px){
+	main{
+		width: 375px;
+		max-width: 90%;
+		flex-wrap: wrap;
+		overflow: visible;
+		margin: 120px 0;
+	}
+
+	.img{
+		width: 75%;
+		margin: -125px auto 0;
+	}
+
+	.dekstop{
+		display: none;
+	}
+
+	.mobile,
+	.mobile *{
+		position: relative;
+		display: block;
+		width: 100%;
+	}
+
+	.woman-mobile{
+		z-index: 999;
+	}
+
+	.mobile-pattern{
+		margin-top: -100px;
+		z-index: 1;
+	}
+
+	.faq{
+		width: 100%;
+		padding: 24px 24px 48px 24px;
+	}
+
+	.answer{
+		font-size: 12px;
+	}
+
+	.faq-block{
+		width: 100%;
+	}
+
+	h1{
+		text-align: center;
+	}
+}
